@@ -6,7 +6,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
 
 public class AppComsumer {
-    public static final String url = "tcp://www.mafh.xin:61616";
+    public static final String url = "failover:(tcp://www.mafh.xin:61617,tcp://www.mafh.xin:61618,tcp://www.mafh.xin:61616)?randomize=true";
     public static final String queueName = "queue-test";
     public static void main(String[] args) throws JMSException {
 //        1.创建connectionFactory

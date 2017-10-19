@@ -8,7 +8,7 @@ import javax.jms.*;
  *
  */
 public class AppProducer {
-    public static final String url = "tcp://www.mafh.xin:61616";
+    public static final String url = "failover:(tcp://www.mafh.xin:61617,tcp://www.mafh.xin:61618)?randomize=true";
     public static final String queueName = "queue-test";
     public static void main(String[] args) throws JMSException {
 //        1.创建connectionFactory
